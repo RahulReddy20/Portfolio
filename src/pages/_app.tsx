@@ -10,6 +10,7 @@ import { Toaster } from "../components/Toaster";
 import { MantineProvider } from "@mantine/core";
 import { Analytics } from "@vercel/analytics/react";
 import { initGA, logPageView } from "../utils/analytics";
+import Script from "next/script";
 
 declare global {
   interface Window {
@@ -47,6 +48,22 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
       </Head>
       <MantineProvider>
         <ThemeProvider theme={defaultTheme}>
