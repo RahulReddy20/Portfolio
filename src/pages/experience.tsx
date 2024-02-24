@@ -119,6 +119,11 @@ export default function Experience() {
           </Tabs>
         </TabsContainer>
         <Education />
+        <a href='https://leetcode.com/rahulreddy2036/' target='_blank'>
+          <img
+            src='https://leetcard.jacoblin.cool/rahulreddy2036?ext=heatmap&theme=dark&font=Poppins&border=0&radius=20&width=700&height=350'
+            alt='LeetCode Stats'></img>
+        </a>
       </Section>
       <Footer />
     </div>
