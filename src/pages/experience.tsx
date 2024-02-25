@@ -7,7 +7,12 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { ScrollTop } from "../components/ScrollTop";
 import { Section, Title, Description } from "../styles/styles";
-import { TabButton, TabContent, TabsContainer } from "../styles/experience";
+import {
+  TabButton,
+  TabContent,
+  TabsContainer,
+  Leetcode,
+} from "../styles/experience";
 import { Briefcase } from "phosphor-react";
 import works from "../data/experiences";
 import { Education } from "../components/Education";
@@ -119,11 +124,13 @@ export default function Experience() {
           </Tabs>
         </TabsContainer>
         <Education />
-        <a href='https://leetcode.com/rahulreddy2036/' target='_blank'>
-          <img
-            src='https://leetcard.jacoblin.cool/rahulreddy2036?ext=heatmap&theme=dark&font=Poppins&border=0&radius=20&width=700&height=350'
-            alt='LeetCode Stats'></img>
-        </a>
+        <Leetcode>
+          <a href='https://leetcode.com/rahulreddy2036/' target='_blank'>
+            <img
+              src='https://leetcard.jacoblin.cool/rahulreddy2036?ext=heatmap&theme=dark&font=Poppins&border=0&radius=20&width=700&height=350'
+              alt='LeetCode Stats'></img>
+          </a>
+        </Leetcode>
       </Section>
       <Footer />
     </div>

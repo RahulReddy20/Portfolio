@@ -197,3 +197,10 @@ export const TabContent = styled.div`
     }
   }
 `;
+
+export const Leetcode = styled.div`
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+`;
