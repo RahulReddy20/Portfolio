@@ -11,7 +11,7 @@ import { ServerStyleSheet } from "styled-components";
 const meta = {
   title: "Rahul Portfolio",
   description: "Rahul Portfolio",
-  image: "/mypic3.jpg",
+  image: "/home_ss.png",
 };
 
 export default class MyDocument extends Document {
@@ -56,7 +56,7 @@ export default class MyDocument extends Document {
           <meta name='robots' content='index, follow' />
           <meta name='language' content='pt-EN' />
           <meta name='rating' content='general' />
-          <link rel='canonical' href='https://www.rahul.vercel.app/' />
+          <link rel='canonical' href='https://www.rahul-reddy.vercel.app/' />
 
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link rel='preconnect' href='https://fonts.gstatic.com' />
@@ -65,7 +65,10 @@ export default class MyDocument extends Document {
             rel='stylesheet'
           />
 
-          <meta property='og:url' content='https://www.rahul.vercel.app/' />
+          <meta
+            property='og:url'
+            content='https://www.rahul-reddy.vercel.app/'
+          />
           <meta property='og:type' content='website' />
           <meta property='og:site_name' content='Rahul' />
           <meta property='og:title' content={meta.title} />
